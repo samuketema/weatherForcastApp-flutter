@@ -17,6 +17,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   void initState() {
     super.initState();
+    getLocationData();
     
   }
 
@@ -27,7 +28,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     longitude = location.longitude;
 
     NetworkHelper networkHelper = await NetworkHelper('https://api.openweathermap.org/data/3.0/onecall?lat=33.44&lon=-94.04&appid={API key}');
-   var weatherDatan= networkHelper.getData(); 
+   var weatherData= networkHelper.getData(); 
   }
   
   @override
